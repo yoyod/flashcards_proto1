@@ -8,7 +8,19 @@ How it should work:
 """
 
 def flashcards(file):
-    flashc = open(file, "r")
-    print(flashc.read())
+    # The next five lines build a list out of the text file
+    flashc_raw = open(file, "r")
+    flashc = flashc_raw.read()
+    flashc_list = flashc.split(" ")
+    flashc_raw.close()
+
+    # The list contains spanish words at even indexes and english words at odd indexes. We separate them into two lists.
+    spanish = flashc_list[::2]
+    english = flashc_list[1::2]
+    print(spanish)
+    print(english)
+
+    word_count = len(spanish)
+    print(word_count)
 
 flashcards('flashcard_list.txt')
