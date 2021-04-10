@@ -14,10 +14,17 @@ def flashcards(file):
     flashc_list = flashc.split(" ")
     flashc_raw.close()
 
-    # The list contains spanish words at even indexes and english words at odd indexes
+    # The list contains spanish words at even indexes and english words at odd indexes. We separate them into two lists.
     spanish = flashc_list[::2]
     english = flashc_list[1::2]
     print(spanish)
     print(english)
 
+    # Here we still need to randomly rearange the cards in the lists
+    random_spanish = spanish
+    random_english = english
+
+    # Print the cards one by one and wait for the answer
+    for w in random_spanish:
+        print(w)
 flashcards('flashcard_list.txt')

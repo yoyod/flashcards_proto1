@@ -20,7 +20,11 @@ def flashcards(file):
     print(spanish)
     print(english)
 
-    word_count = len(spanish)
-    print(word_count)
+    # Here we still need to randomly rearange the cards in the lists
+    random_spanish = spanish
+    random_english = english
 
+    # Print the cards one by one and wait for the answer
+    for w in random_spanish:
+        print(w)
 flashcards('flashcard_list.txt')
